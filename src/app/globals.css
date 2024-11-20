@@ -3,19 +3,30 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --background: #f9f4ef;
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+.bg-hero {
+  background-image:url('/lofigirl.gif') ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.btn-primary {
+  background-color: #f25042;
+}
+
+.bg-section-primary {
+  background-color: #8c7851;
+}
+.bg-section-secondary {
+  background-color: #eaddcf;
 }
