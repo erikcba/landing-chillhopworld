@@ -3,7 +3,7 @@ import React from 'react'
 const Hero = () => {
     return (
         <section className='relative bg-hero h-[60vh] bg-cover bg-center'>
-            <div className='absolute inset-0 bg-zinc-800 bg-opacity-10 backdrop-blur'></div>
+            <div className='absolute inset-0 bg-zinc-800 bg-opacity-10 '></div>
             <div className='w-full flex flex-row items-center justify-center h-full container'>
                 <div className='flex flex-col items-center justify-center sm:w-1/3 sm:p-0 w-full px-12 '>
                     <div className='w-full flex flex-col items-center justify-center gap-4 z-10'>

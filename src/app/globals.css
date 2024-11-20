@@ -14,7 +14,7 @@ body {
 }
 
 .bg-hero {
-  background-image:url('/lofigirl.gif') ;
+  background-image:url('/lofirain.gif') ;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -28,5 +28,5 @@ body {
   background-color: #8c7851;
 }
 .bg-section-secondary {
-  background-color: #eaddcf;
+  background-color: #90b4ce;
 }
