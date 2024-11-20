@@ -3,7 +3,7 @@ import React from 'react'
 const Hero = () => {
     return (
         <section className='relative bg-hero h-[60vh] bg-cover bg-center'>
-            <div className='absolute inset-0 bg-zinc-800 bg-opacity-10 '></div>
+            <div className='absolute inset-0 bg-zinc-800 bg-opacity-20 '></div>
             <div className='w-full flex flex-row items-center justify-center h-full container'>
                 <div className='flex flex-col items-center justify-center sm:w-1/3 sm:p-0 w-full px-12 '>
                     <div className='w-full flex flex-col items-center justify-center gap-4 z-10'>
@@ -14,8 +14,8 @@ const Hero = () => {
                             New melodies and talents that transform your day
                         </p>
                         <div className='w-full'>
-                            <button className='btn-primary py-2 px-3 rounded-md text-stone-100 font-medium text-lg hover:bg-amber-100 transition-colors ease-in-out duration-500 hover:text-stone-700'>
-                                Check it out!
+                            <button className='bg-cyan-300 py-2 px-3 rounded-md text-stone-800 font-medium text-lg hover:bg-cyan-900 hover:text-stone-100 transition-colors ease-in-out duration-500'>
+                                Listen now!
                             </button>
                         </div>
                     </div>
