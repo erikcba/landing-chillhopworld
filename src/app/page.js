@@ -8,9 +8,9 @@ export default function Home() {
   return (
     <>
       <NavBar />
-      <Hero/>
-      <Releases/>
-      <Listen/>
+      <Hero />
+      <Releases />
+      <Listen />
     </>
 
   );

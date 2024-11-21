@@ -11,10 +11,10 @@ const NavBar = () => {
                 </a>
                 <div className='hidden flex-row items-center gap-4 justify-end w-1/2 sm:flex '>
                     <a className='text-stone-100 hover:text-white hover:scale-105 transition-transform ease-in-out font-medium' href="">
-                        <li>Home</li>
+                        <li>Releases</li>
                     </a>
                     <a className='text-stone-100 hover:text-white hover:scale-105 transition-transform ease-in-out font-medium' href="">
-                        <li>About</li>
+                        <li>Listen</li>
                     </a>
                     <a className='text-stone-100 hover:text-white hover:scale-105 transition-transform ease-in-out font-medium' href="">
                         <li>Contact</li>
