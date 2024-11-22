@@ -16,7 +16,7 @@ const Listen = () => {
   return (
     <section  className="bg-section-secondary py-32 w-full">
       <div data-aos="fade-up" className="container mx-auto">
-        <div  className="w-full h-96 flex flex-row justify-center items-center gap-12">
+        <div  className="w-full flex flex-row justify-center items-center gap-12">
           <h2 className="w-1/2 mx-auto text-5xl text-stone-200 font-bold drop-shadow-lg leading-tight">
             Relaxing sounds that accompany your days
           </h2>
