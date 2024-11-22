@@ -25,10 +25,13 @@ body {
 }
 
 .bg-section-primary {
-  background: rgb(35, 41, 70);
-  background: linear-gradient(180deg, rgba(35, 41, 70, 1) 15%, rgba(70, 22, 121, 1) 100%);
+  background: #0f0e17;
+  background: linear-gradient(180deg, #0f0e17 40%, rgba(70, 22, 121, 1) 100%);
 }
 
 .bg-section-secondary {
   background: rgb(70,22,121);
+}
+.slick-prev, .slick-next {
+  top: 45%;
 }
