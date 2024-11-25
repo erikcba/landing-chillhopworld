@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ArtistisCard from '../components/ArtistisCard';
 
 const Artists = () => {
@@ -20,7 +20,10 @@ const Artists = () => {
         { name: 'Aloja Sounds', image: './portada1.avif' },
         { name: 'Sape Beats', image: './portada3.jpg' },
         { name: 'Oa manola', image: './portada4.jpg' },
+
+
     ];
+
 
     const handleShowMore = () => {
         setVisibleArtists(prev => prev + 4)
