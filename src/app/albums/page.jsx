@@ -1,3 +1,4 @@
+"use client"
 import { useEffect, useState } from 'react'
 
 
@@ -13,7 +14,7 @@ const albums = () => {
     const fetchArtistAlbums = async () => {
         const artistId = "6FRp4QaPuNXElp7RzYVNc8"
         try {
-            const response = await fetch(`/api/latestsAlbums?artistId=${artistId}`)
+            const response = await fetch(`/api/allAlbums?artistId=${artistId}`)
             if (!response.ok) throw new Error("Failed to fetch artist albums")
 
             const data = await response.json()
