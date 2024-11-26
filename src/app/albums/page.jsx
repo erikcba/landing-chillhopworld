@@ -5,17 +5,16 @@ import Image from 'next/image'
 import Skeleton from '../components/Skeleton'
 import AOS from 'aos'
 import 'aos/dist/aos.css';
+import AlbumsSection from './AlbumsSection'
+import useArtistAlbums from '../../hooks/useAlbums'
 
 
 const Albums = () => {
-    const [albums, setAlbums] = useState([])
-    const [error, setError] = useState(null)
-    const [isLoading, setisLoading] = useState(true)
-    const [latestAlbum, setLatestAlbum] = useState()
 
+    const artistId = "6FRp4QaPuNXElp7RzYVNc8"
+    const { latestAlbum } = useArtistAlbums(artistId)
 
     useEffect(() => {
-        fetchArtistAlbums()
         AOS.init({
             duration: 1000,
             easing: 'ease-in-out',
@@ -23,32 +22,18 @@ const Albums = () => {
         })
     }, [])
 
-    const fetchArtistAlbums = async () => {
-        const artistId = "6FRp4QaPuNXElp7RzYVNc8"
-        try {
-            const response = await fetch(`/api/allAlbums?artistId=${artistId}`)
-            if (!response.ok) throw new Error("Failed to fetch artist albums")
 
-            const data = await response.json()
-            setAlbums(data.albums)
-            setLatestAlbum(data.latestAlbum)
-            setisLoading(false)
-            console.log(data.latestAlbum)
-        } catch (err) {
-            setError(err.message)
-        }
-    }
     return (
         <>
             <NavBar />
             <div className='bg-albums relative h-screen  '>
                 <div className='absolute inset-0 bg-gradient-to-b from-transparent to-bgSecondary z-0'></div>
-                <div className='container mx-auto pt-40 relative z-10 flex flex-col gap-10'>
-                    <h1 className='text-4xl text-stone-100 font-medium'>Latest Release</h1>
+                <div className='container mx-auto pt-40 relative z-10 flex flex-col gap-14'>
+                    <h1 className='text-4xl text-stone-100 font-medium drop-shadow-lg '>Latest Release</h1>
                     {
                         latestAlbum ? (
                             latestAlbum.map((album, index) => (
-                                <div key={index} data-aos="fade-up" className='flex flex-row items-center gap-5'>
+                                <div key={index} data-aos="fade-up" className='flex flex-row items-center justify-start gap-20'>
                                     <div className='rounded-md overflow-hidden w-fit shadow-lg'>
                                         <Image src={album.images[0].url} alt={album.name} width={500} height={500} />
                                     </div>
@@ -65,15 +50,15 @@ const Albums = () => {
                             ))
                         )
                             :
-                            <div>
-
+                            <div className='mr-auto'>
+                                <Skeleton />
                             </div>
                     }
                 </div>
 
             </div>
-            <section className='h-96 bg-bgSecondary'>
-
+            <section className=' bg-bgSecondary'>
+                    <AlbumsSection/>
             </section>
         </>
     )
