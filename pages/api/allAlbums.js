@@ -50,6 +50,8 @@ export default async function handler(req, res) {
     // Ordenar por fecha de lanzamiento y seleccionar los 8 más recientes
     const sortedAlbums = albumsData.items
       .sort((a, b) => new Date(b.release_date) - new Date(a.release_date))
+    
+  const latestAlbum = sortedAlbums.slice(0,1)    
 
     // Formatear los datos relevantes
     const formattedAlbums = sortedAlbums.map((album) => ({
@@ -60,9 +62,10 @@ export default async function handler(req, res) {
       total_tracks: album.total_tracks,
       type: album.album_type,
       url: album.external_urls.spotify,
+      
     }));
 
-    res.status(200).json({ albums: formattedAlbums });
+    res.status(200).json({ albums: formattedAlbums, latestAlbum: latestAlbum });
   } catch (error) {
     console.error('Error fetching artist albums:', error.message);
     res.status(500).json({ error: error.message });

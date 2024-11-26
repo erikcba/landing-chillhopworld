@@ -20,6 +20,14 @@ body {
   background-size: cover;
 }
 
+.bg-albums {
+  background-image: url('/portadaAlbum.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 .btn-primary {
   background-color: #b8c1ec;
 }

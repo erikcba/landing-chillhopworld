@@ -12,7 +12,7 @@ const Releases = () => {
 
   const [albums, setAlbums] = useState([])
   const [error, setError] = useState(null)
-  const [isLoading, setisLoading] = useState(true)
+  const [isLoading, setisLoading] = useState(false)
 
 
   useEffect(() => {
@@ -21,10 +21,10 @@ const Releases = () => {
 
   const fetchArtistAlbums = async () => {
     const artistId = "6FRp4QaPuNXElp7RzYVNc8"
+    setisLoading(true)
     try {
       const response = await fetch(`/api/latestsAlbums?artistId=${artistId}`)
       if (!response.ok) throw new Error("Failed to fetch artist albums")
-
       const data = await response.json()
       setAlbums(data.albums)
       setisLoading(false)
