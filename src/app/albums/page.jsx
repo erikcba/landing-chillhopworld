@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react'
 
 
-const albums = () => {
+const Albums = () => {
     const [albums, setAlbums] = useState([])
     const [error, setError] = useState(null)
     const [isLoading, setisLoading] = useState(true)
@@ -35,4 +35,4 @@ const albums = () => {
     )
 }
 
-export default albums
+export default Albums
