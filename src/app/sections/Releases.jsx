@@ -97,6 +97,7 @@ const Releases = () => {
                     title={album.name}
                     artist={album.artists}
                     image={album.image}
+                    type={album.type}
                   />
                 ))
               ) : (

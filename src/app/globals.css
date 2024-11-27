@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Outfit:wght@100..900&family=Space+Grotesk:wght@300..700&family=Titillium+Web:wght@200;300;400;600;700;900&display=swap');
 
 :root {
   --background: #f9f4ef;
@@ -11,6 +12,7 @@
 body {
   color: var(--foreground);
   background: var(--background);
+  font-family: "Space Grotesk", sans-serif;
 }
 
 .bg-hero {
