@@ -11,9 +11,9 @@ const NavBar = () => {
                     </h1>
                 </Link>
                 <div className='hidden flex-row items-center gap-4 justify-end w-1/2 sm:flex '>
-                    <a className='text-stone-100 hover:text-white hover:scale-105 transition-transform ease-in-out font-medium' href="">
+                    <Link href="/albums" className='text-stone-100 hover:text-white hover:scale-105 transition-transform ease-in-out font-medium' >
                         <li>Releases</li>
-                    </a>
+                    </Link>
                     <a className='text-stone-100 hover:text-white hover:scale-105 transition-transform ease-in-out font-medium' href="">
                         <li>Listen</li>
                     </a>
