@@ -19,9 +19,9 @@ const AlbumsSection = () => {
     return (
         <div className='container mx-auto py-10'>
             <h1 className='text-4xl text-stone-100 font-medium drop-shadow-lg pb-14'>Releases</h1>
-            {isLoading && <Skeleton/> }
+            {isLoading && <Skeleton />}
             {error && <p>Error: {error}</p>}
-            
+
             {!isLoading && !error && (
                 <>
                     <div data-aos="fade-up" className='grid grid-cols-4 gap-10'>
@@ -32,7 +32,7 @@ const AlbumsSection = () => {
                                 rel='noreferrer'
                                 key={index}
                                 className='w-fit flex flex-col items-start justify-start group hover:cursor-pointer'>
-                                <div className='rounded-md overflow-hidden w-fit shadow-lg'>
+                                <div className='relative rounded-md overflow-hidden w-fit shadow-lg'>
                                     <Image
                                         className='transition-transform duration-300 ease-in-out group-hover:scale-110'
                                         src={album.image}
@@ -40,6 +40,9 @@ const AlbumsSection = () => {
                                         width={300}
                                         height={300}
                                     />
+                                    <div className='absolute top-3 px-4 py-1.5 right-3 leading-none rounded-full text-sm bg-fuchsia-800 text-stone-300 z-10'>
+                                        <p>{album.type}</p>
+                                    </div>
                                 </div>
                                 <div>
                                     <h3 className='pt-4 text-lg text-stone-200 font-medium leading-none'>{album.name}</h3>
@@ -48,7 +51,7 @@ const AlbumsSection = () => {
                             </a>
                         ))}
                     </div>
-                    
+
                     {/* Controles de Paginación */}
                     <div className='flex justify-center items-center mt-10'>
                         <button
@@ -69,6 +72,6 @@ const AlbumsSection = () => {
             )}
         </div>
     );
-}    
+}
 
 export default AlbumsSection

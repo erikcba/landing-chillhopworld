@@ -14,7 +14,7 @@ const NavBar = () => {
                     <Link href="/albums" className='text-stone-100 hover:text-white hover:scale-105 transition-transform ease-in-out font-medium' >
                         <li>Releases</li>
                     </Link>
-                    <a className='text-stone-100 hover:text-white hover:scale-105 transition-transform ease-in-out font-medium' href="">
+                    <a className='text-stone-100 hover:text-white hover:scale-105 transition-transform ease-in-out font-medium' href="#listen">
                         <li>Listen</li>
                     </a>
                     <a className='text-stone-100 hover:text-white hover:scale-105 transition-transform ease-in-out font-medium' href="">

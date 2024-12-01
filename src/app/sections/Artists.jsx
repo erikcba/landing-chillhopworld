@@ -6,23 +6,18 @@ const Artists = () => {
     // Estado para controlar cuántos artistas mostrar inicialmente
     const [visibleArtists, setVisibleArtists] = useState(8);
 
-    // Lista completa de artistas
-    const artists = [
-        { name: 'Pitulio Beats', image: './portada2.jfif' },
-        { name: 'Aloja Sounds', image: './portada1.avif' },
-        { name: 'Sape Beats', image: './portada3.jpg' },
-        { name: 'Oa manola', image: './portada4.jpg' },
-        { name: 'Pitulio Beats', image: './portada2.jfif' },
-        { name: 'Aloja Sounds', image: './portada1.avif' },
-        { name: 'Sape Beats', image: './portada3.jpg' },
-        { name: 'Oa manola', image: './portada4.jpg' },
-        { name: 'Pitulio Beats', image: './portada2.jfif' },
-        { name: 'Aloja Sounds', image: './portada1.avif' },
-        { name: 'Sape Beats', image: './portada3.jpg' },
-        { name: 'Oa manola', image: './portada4.jpg' },
+    const playlistId = '4eWBwGl0c5wtp6k5Krp6My'
+    const [artists, setArtists] = useState([]);
 
+    const fetchArtists = async () => {
+        const response = await fetch(`/api/artists?playlistId=${playlistId}`);
+        const data = await response.json();
+        setArtists(data.artists || []);
+    }
 
-    ];
+    useEffect(() => {
+        fetchArtists();
+    }, []);
 
 
     const handleShowMore = () => {
@@ -45,7 +40,6 @@ const Artists = () => {
                             />
                         ))}
                     </div>
-                    {/* Botón "Mostrar más" que aparece solo si hay más artistas */}
                     {visibleArtists < artists.length && (
                         <div className="flex justify-center mt-6">
                             <button
