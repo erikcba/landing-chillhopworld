@@ -52,6 +52,10 @@ body {
   background: linear-gradient(180deg, rgba(70, 22, 121, 1) 40%, #0f0e17 100%);
 }
 
+.bg-section-tertiary-2 {
+  background: #0f0e17;
+}
+
 .slick-prev, .slick-next {
   top: 45%;
 }

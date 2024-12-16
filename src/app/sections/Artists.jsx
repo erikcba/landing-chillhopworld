@@ -3,11 +3,12 @@ import React, { useEffect, useState } from 'react';
 import ArtistisCard from '../components/ArtistisCard';
 
 const Artists = () => {
-    // Estado para controlar cuántos artistas mostrar inicialmente
+
     const [visibleArtists, setVisibleArtists] = useState(8);
 
     const playlistId = '4eWBwGl0c5wtp6k5Krp6My'
-    const [artists, setArtists] = useState([]);
+    const [artists, setArtists] = useState([])
+    const [showLess, setShowLess] = useState(false)
 
     const fetchArtists = async () => {
         const response = await fetch(`/api/artists?playlistId=${playlistId}`);
@@ -21,7 +22,8 @@ const Artists = () => {
 
 
     const handleShowMore = () => {
-        setVisibleArtists(prev => prev + 4)
+        setVisibleArtists(prev => prev + (artists.length - visibleArtists))
+        setShowLess(true)
     };
 
     return (
@@ -40,13 +42,20 @@ const Artists = () => {
                             />
                         ))}
                     </div>
-                    {visibleArtists < artists.length && (
+                    {visibleArtists && (
                         <div className="flex justify-center mt-6">
                             <button
-                                onClick={handleShowMore}
+                                onClick={() => {
+                                    if (showLess) {
+                                        setVisibleArtists(8); // Restablece a los artistas iniciales
+                                        setShowLess(false);
+                                    } else {
+                                        handleShowMore(); // Muestra más artistas
+                                    }
+                                }}
                                 className="px-4 py-2 border shadow-lg hover:shadow-fuchsia-800 uppercase border-fuchsia-600 text-white text-lg rounded-md hover:bg-fuchsia-600 transition ease-in-out duration-300 "
                             >
-                                Show more
+                                {showLess ? 'Show Less' : 'Show More'}
                             </button>
                         </div>
                     )}
@@ -56,4 +65,4 @@ const Artists = () => {
     );
 };
 
-export default Artists;
+export default Artists

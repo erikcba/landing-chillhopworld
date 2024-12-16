@@ -4,8 +4,8 @@ const Hero = () => {
     return (
         <section className='relative bg-hero h-[70vh] bg-cover bg-center'>
             <div className='absolute inset-0 bg-zinc-900 bg-opacity-20 '></div>
-            <div className='w-full flex flex-row items-center justify-center h-full container'>
-                <div className='flex flex-col items-center justify-center sm:w-1/2 sm:p-0 w-full px-12 '>
+            <div className='w-full container mx-auto flex flex-row items-center justify-center h-full '>
+                <div className='flex flex-col items-center justify-center lg:w-full sm:w-1/2 sm:p-0 w-full px-12 '>
                     <div className='w-full flex flex-col items-center justify-center gap-4 z-10'>
                         <h1 className='text-5xl font-bold text-stone-100 text-left w-full drop-shadow-lg'>
                             Presenting the best of lofi
