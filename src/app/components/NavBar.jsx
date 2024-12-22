@@ -1,29 +1,77 @@
-import Link from 'next/link'
-import React from 'react'
+"use client"
+import Link from 'next/link';
+import React, { useState } from 'react';
 
 const NavBar = () => {
-    return (
-        <nav className='bg-gradient-to-t from-transparent to-zinc-900/80 fixed top-0 w-full z-20'>
-            <ul className='container mx-auto flex flex-row justify-between items-center py-8'>
-                <Link className='sm:w-1/2 w-full' href="/">
-                    <h1 className='text-3xl font-bold sm:w-1/2 w-full text-center sm:text-start text-stone-300 hover:text-white ease-in-out'>
-                        Chillhop World
-                    </h1>
-                </Link>
-                <div className='hidden flex-row items-center gap-4 justify-end w-1/2 sm:flex '>
-                    <Link href="/albums" className='text-stone-100 hover:text-white hover:scale-105 transition-transform ease-in-out font-medium' >
-                        <li>Releases</li>
-                    </Link>
-                    <a className='text-stone-100 hover:text-white hover:scale-105 transition-transform ease-in-out font-medium' href="#listen">
-                        <li>Listen</li>
-                    </a>
-                    <a className='text-stone-100 hover:text-white hover:scale-105 transition-transform ease-in-out font-medium' href="">
-                        <li>Contact</li>
-                    </a>
-                </div>
-            </ul>
-        </nav>
-    )
-}
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-export default NavBar
+    return (
+        <nav className="bg-gradient-to-t from-transparent to-zinc-900/90 fixed top-0 w-full z-20">
+            <div className="container mx-auto flex items-center justify-between py-4 px-4 sm:px-8">
+                {/* Logo */}
+                <Link href="/" className="text-3xl font-bold text-stone-300 hover:text-white transition ease-in-out">
+                    Chillhop World
+                </Link>
+
+                {/* Mobile Menu Button */}
+                <button
+                    className="sm:hidden text-stone-300 hover:text-white focus:outline-none"
+                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={2}
+                        stroke="currentColor"
+                        className="w-6 h-6"
+                    >
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+
+                {/* Desktop Menu */}
+                <ul className="hidden sm:flex flex-row items-center gap-6">
+                    <li>
+                        <Link href="/albums" className="text-stone-200 hover:text-white transition ease-in-out font-semibold text-lg">
+                            Releases
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href="/#listen" className="text-stone-200 hover:text-white transition ease-in-out font-semibold text-lg">
+                            Listen
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href="/#contact" className="text-stone-200 hover:text-white transition ease-in-out font-semibold text-lg">
+                            Contact
+                        </Link>
+                    </li>
+                </ul>
+
+                {/* Mobile Menu */}
+                {isMobileMenuOpen && (
+                    <ul className="absolute top-16 left-0 w-full bg-zinc-900/95 flex flex-col items-center gap-4 py-6 sm:hidden">
+                        <li>
+                            <Link href="/albums" className="text-stone-200 hover:text-white transition ease-in-out font-semibold text-lg">
+                                Releases
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/#listen" className="text-stone-200 hover:text-white transition ease-in-out font-semibold text-lg">
+                                Listen
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/#contact" className="text-stone-200 hover:text-white transition ease-in-out font-semibold text-lg">
+                                Contact
+                            </Link>
+                        </li>
+                    </ul>
+                )}
+            </div>
+        </nav>
+    );
+};
+
+export default NavBar;

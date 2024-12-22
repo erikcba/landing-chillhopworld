@@ -4,6 +4,7 @@ import Releases from "./sections/Releases";
 import Listen from "./sections/Listen";
 import Artists from "./sections/Artists";
 import Contact from "./sections/Contact";
+import Footer from "./sections/Footer";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Listen />
       <Artists/>
       <Contact/>
+      <Footer/>
     </>
 
   );
