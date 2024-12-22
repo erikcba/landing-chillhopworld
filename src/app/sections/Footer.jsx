@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 const Footer = () => {
@@ -16,7 +17,7 @@ const Footer = () => {
     <div className='bg-section-secondary py-12 w-full'>
       <div className='container mx-auto'>
         <div className='flex flex-col sm:flex-row items-center justify-between gap-5 sm:gap-2'>
-          <a href='/#' className='text-stone-200 text-3xl font-semibold'>Chillhop World</a>
+          <Link href='/#' className='text-stone-200 text-3xl font-semibold'>Chillhop World</Link>
           <div className='flex flex-row items-center justify-start gap-2'>
             {
               icons.map((icon, index) => (
