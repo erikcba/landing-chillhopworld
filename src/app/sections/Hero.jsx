@@ -7,10 +7,10 @@ const Hero = () => {
             <div className='w-full container mx-auto flex flex-row items-center justify-center h-full '>
                 <div className='flex flex-col items-center justify-center lg:w-full sm:w-1/2 sm:p-0 w-full px-12 '>
                     <div className='w-full flex flex-col items-center justify-center gap-4 z-10'>
-                        <h1 className='md:text-5xl text-3xl font-bold text-stone-100 text-left w-full drop-shadow-lg'>
+                        <h1 className='md:text-5xl text-4xl font-bold text-stone-100 text-left w-full drop-shadow-lg'>
                             Presenting the best of lofi
                         </h1>
-                        <p className='md:text-2xl text-xl text-left font-medium w-full text-stone-100 drop-shadow-lg'>
+                        <p className='text-2xl text-left font-medium w-full text-stone-100 drop-shadow-lg'>
                             New melodies and talents that transform your day
                         </p>
                         <div className='w-full'>
