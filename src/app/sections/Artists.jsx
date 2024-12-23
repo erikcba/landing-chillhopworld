@@ -48,10 +48,10 @@ const Artists = () => {
                             <button
                                 onClick={() => {
                                     if (showLess) {
-                                        setVisibleArtists(8) // Restablece a los artistas iniciales
+                                        setVisibleArtists(8)
                                         setShowLess(false)
                                     } else {
-                                        handleShowMore() // Muestra más artistas
+                                        handleShowMore() 
                                     }
                                 }}
                                 className="px-4 py-2 border shadow-lg hover:shadow-fuchsia-800 uppercase border-fuchsia-600 text-white text-lg rounded-md hover:bg-fuchsia-600 transition ease-in-out duration-300 "
