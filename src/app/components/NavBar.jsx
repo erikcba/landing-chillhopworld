@@ -7,9 +7,9 @@ const NavBar = () => {
 
     return (
         <nav className="bg-gradient-to-t from-transparent to-zinc-900/90 fixed top-0 w-full z-20">
-            <div className="container mx-auto flex items-center justify-between py-4 px-4 sm:px-8">
+            <div className="container mx-auto flex items-center justify-between py-8 px-4 sm:px-8">
                 {/* Logo */}
-                <Link href="/" className="text-3xl font-bold text-stone-300 hover:text-white transition ease-in-out">
+                <Link href="/" className="text-3xl font-bold text-stone-300 hover:text-white transition duration-500 ease-in-out">
                     Chillhop World
                 </Link>
 
