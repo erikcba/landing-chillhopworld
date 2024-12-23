@@ -4,10 +4,19 @@ import React from 'react'
 const Footer = () => {
 
 
-  const igIcon = <box-icon name='instagram' type='logo' color='#e0e0e0' ></box-icon>
-  const spotifyIcon = <box-icon type='logo' color='#e0e0e0' name='spotify'></box-icon>
-  const youtubeIcon = <box-icon type='logo' color='#e0e0e0' name='youtube'></box-icon>
-  const appleMusicIcon = <box-icon type='logo' color='#e0e0e0' name='apple'></box-icon>
+  const igIcon = <a href="https://www.instagram.com/chillhopworld/" target='blank' >
+    <box-icon name='instagram' type='logo' color='#e0e0e0' size='sm' ></box-icon>
+  </a>
+  const spotifyIcon = <a href="https://open.spotify.com/playlist/4eWBwGl0c5wtp6k5Krp6My?si=LYvlJIfzS9uIOyxtSC1RjA" target='blank'>
+    <box-icon type='logo' color='#e0e0e0' size='sm' name='spotify'></box-icon>
+  </a>
+
+  const youtubeIcon = <a href="https://www.youtube.com/channel/UC5HqzNII2ZZzENhYqJf_-eQ" target='blank' >
+    <box-icon type='logo' color='#e0e0e0' size='sm' name='youtube'></box-icon>
+  </a>
+  const appleMusicIcon = <a href="https://music.apple.com/us/artist/chillhop-world/1597131229?l=es-MX" target='blank' >
+    <box-icon type='logo' color='#e0e0e0' size='sm' name='apple'></box-icon>
+  </a>
 
   const icons = [igIcon, spotifyIcon, youtubeIcon, appleMusicIcon]
 
