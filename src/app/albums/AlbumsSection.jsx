@@ -18,13 +18,13 @@ const AlbumsSection = () => {
 
     return (
         <div className='container mx-auto py-10'>
-            <h1 className='text-4xl text-stone-100 font-medium drop-shadow-lg pb-14'>Releases</h1>
+            <h1 className='text-4xl text-stone-100 font-medium drop-shadow-lg pb-14 px-10'>Releases</h1>
             {isLoading && <Skeleton />}
             {error && <p>Error: {error}</p>}
 
             {!isLoading && !error && (
                 <>
-                    <div data-aos="fade-up" className='grid grid-cols-4 gap-10'>
+                    <div data-aos="fade-up" className='grid sm:grid-cols-4 grid-cols-2 px-10 gap-10'>
                         {paginatedAlbums.map((album, index) => (
                             <a
                                 href={album.url}
@@ -45,8 +45,8 @@ const AlbumsSection = () => {
                                     </div>
                                 </div>
                                 <div>
-                                    <h3 className='pt-4 text-lg text-stone-200 font-medium leading-none'>{album.name}</h3>
-                                    <p className='text-stone-300'>{album.artists}</p>
+                                    <h3 className='pt-4 sm:text-lg text-base text-stone-200 font-medium leading-none'>{album.name}</h3>
+                                    <p className='text-stone-300 sm:text-base text-sm'>{album.artists}</p>
                                 </div>
                             </a>
                         ))}

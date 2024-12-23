@@ -28,7 +28,7 @@ const Albums = () => {
             <NavBar />
             <div className='bg-albums relative h-screen  '>
                 <div className='absolute inset-0 bg-gradient-to-b from-transparent to-bgSecondary z-0'></div>
-                <div className='container mx-auto pt-40 relative z-10 flex flex-col gap-14'>
+                <div className='container mx-auto sm:pt-40 pt-20 px-10 relative z-10 flex flex-col gap-14'>
                     <h1 className='text-4xl text-stone-100 font-medium drop-shadow-lg '>Latest Release</h1>
                     {
 
@@ -39,11 +39,11 @@ const Albums = () => {
                             </div>
                         ) : latestAlbum ? (
                             latestAlbum.map((album, index) => (
-                                <div key={index} data-aos="fade-up" className='flex flex-row items-center justify-center gap-12'>
-                                    <div className='w-1/2 flex'>
+                                <div key={index} data-aos="fade-up" className='flex sm:flex-row flex-col  items-center justify-center gap-12'>
+                                    <div className='sm:w-1/2 w-full flex'>
                                         <Image src={album.images[0].url} alt={album.name} priority className='shadow-lg rounded-md ml-auto' width={500} height={500} />
                                     </div>
-                                    <div className='flex flex-col gap-1 w-1/2'>
+                                    <div className='flex flex-col gap-1 sm:w-1/2 w-full'>
                                         <p className='text-stone-300 text-sm leading-none'>Release on {album.release_date}</p>
                                         <p className='text-stone-100 text-4xl leading-none font-medium drop-shadow-md'> {album.name} </p>
                                         <p className='text-stone-200 text-xl leading-none pb-6'> {album.artists.map((artist) => artist.name).join(', ')}</p>
