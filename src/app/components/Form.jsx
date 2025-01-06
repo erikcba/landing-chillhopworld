@@ -35,7 +35,7 @@ const Form = () => {
                         name="email"
                         placeholder="Email*"
                         required
-                        className="bg-transparent border-b-2 border-violet-800 py-2 focus:outline-none focus:border-violet-400 text-gray-300 font-medium"
+                        className="bg-transparent border-b-2 text-xl border-violet-800 py-2 focus:outline-none focus:border-violet-400 text-gray-300 font-medium"
                     />
                 </div>
                 <div className="flex flex-col gap-2">
@@ -58,7 +58,7 @@ const Form = () => {
                     <textarea
                         name="message"
                         placeholder="Message"
-                        className="bg-transparent border-b-2 border-violet-800 py-2 focus:outline-none focus:border-violet-400 text-gray-300 font-medium"
+                        className="bg-transparent border-b-2 text-xl border-violet-800 py-2 focus:outline-none focus:border-violet-400 text-gray-300 font-medium"
                     />
                 </div>
 
