@@ -7,7 +7,6 @@ import Slider from 'react-slick'
 import { useEffect, useState } from 'react'
 import Skeleton from '../components/Skeleton'
 import Link from 'next/link'
-import { space } from 'postcss/lib/list'
 
 const Releases = () => {
 
@@ -29,7 +28,6 @@ const Releases = () => {
       const data = await response.json()
       setAlbums(data.albums)
       setisLoading(false)
-      console.log(data)
     } catch (err) {
       setError(err.message)
     }
