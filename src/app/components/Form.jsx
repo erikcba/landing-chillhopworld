@@ -46,6 +46,7 @@ const Form = () => {
                         id="file"
                         type="file"
                         accept=".mp3"
+                        required
                         className="bg-transparent text-gray-300"
                         onChange={(e) => setSelectedFile(e.target.files[0]?.name || null)}
                     />
